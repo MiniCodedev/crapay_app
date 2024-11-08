@@ -1,3 +1,4 @@
+import 'package:crapay_app/pages/home/main_navigation.dart';
 import 'package:crapay_app/pages/language_selection_page.dart';
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const LanguageSelectionPage(),
+      home: const MainNavigation(),
       theme: AppTheme.lightTheme,
     );
   }
