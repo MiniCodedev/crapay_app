@@ -1,5 +1,5 @@
 import 'package:crapay_app/common/basic_button.dart';
-import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/config/theme/app_colors.dart';
 import 'package:crapay_app/pages/initialize_page.dart';
 import 'package:flutter/material.dart';
 

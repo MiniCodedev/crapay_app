@@ -1,4 +1,4 @@
-import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/config/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ManageBookingsPage extends StatefulWidget {
