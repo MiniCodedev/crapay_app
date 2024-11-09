@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MainNavigation(),
+      home: const LanguageSelectionPage(),
       theme: AppTheme.lightTheme,
     );
   }

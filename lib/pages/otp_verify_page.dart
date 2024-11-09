@@ -22,7 +22,9 @@ class _OtpVerifyPageState extends State<OtpVerifyPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Spacer(),
+            const SizedBox(
+              height: 100,
+            ),
             SvgPicture.asset(AppVectors.otpVector),
             const SizedBox(
               height: 10,
@@ -42,7 +44,9 @@ class _OtpVerifyPageState extends State<OtpVerifyPage> {
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.grey),
             ),
-            const Spacer(),
+            const SizedBox(
+              height: 50,
+            ),
             OtpPinField(
               fieldWidth: 50,
               textInputAction: TextInputAction.done,
@@ -84,7 +88,9 @@ class _OtpVerifyPageState extends State<OtpVerifyPage> {
                 ],
               ),
             ),
-            const Spacer(),
+            const SizedBox(
+              height: 50,
+            ),
             BasicButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -92,7 +98,9 @@ class _OtpVerifyPageState extends State<OtpVerifyPage> {
                   ));
                 },
                 text: "Send OTP"),
-            const Spacer()
+            const SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
