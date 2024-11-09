@@ -45,9 +45,13 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    timer = Timer.periodic(const Duration(seconds: 4), (timer) {
-      animatePage();
-    });
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) {
+        timer = Timer.periodic(const Duration(seconds: 4), (timer) {
+          animatePage();
+        });
+      },
+    );
     super.initState();
   }
 
