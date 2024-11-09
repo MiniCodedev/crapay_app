@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:crapay_app/core/assets/app_vectors.dart';
 import 'package:crapay_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -45,14 +44,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) {
-        timer = Timer.periodic(const Duration(seconds: 4), (timer) {
-          animatePage();
-        });
-      },
-    );
     super.initState();
+    timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      animatePage();
+    });
   }
 
   @override
