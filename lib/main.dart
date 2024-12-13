@@ -1,4 +1,3 @@
-import 'package:crapay_app/pages/home/main_navigation.dart';
 import 'package:crapay_app/pages/language_selection_page.dart';
 import 'package:flutter/material.dart';
 import 'config/theme/app_theme.dart';
