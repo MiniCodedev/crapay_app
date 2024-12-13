@@ -16,44 +16,49 @@ class _MobileRegisterPageState extends State<MobileRegisterPage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(
-              flex: 2,
-            ),
-            Text(
-              "Welcome",
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 40,
-                  color: AppColors.primaryColor),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              "Enter your phone number ",
-              style: TextStyle(color: Colors.grey),
-            ),
-            const Spacer(),
-            inputTextField(),
-            const SizedBox(
-              height: 40,
-            ),
-            const Text(
-              "A 4 digit OTP will be sent via SMS to verify your phone number",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey),
-            ),
-            const Spacer(),
-            BasicButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const OtpVerifyPage(),
-                  ));
-                },
-                text: "Continue"),
-            const Spacer(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 150,
+              ),
+              Text(
+                "Welcome",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 40,
+                    color: AppColors.primaryColor),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "Enter your phone number ",
+                style: TextStyle(color: Colors.grey),
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              inputTextField(),
+              const SizedBox(
+                height: 40,
+              ),
+              const Text(
+                "A 4 digit OTP will be sent via SMS to verify your phone number",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.grey),
+              ),
+              const SizedBox(
+                height: 150,
+              ),
+              BasicButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const OtpVerifyPage(),
+                    ));
+                  },
+                  text: "Continue"),
+            ],
+          ),
         ),
       ),
     );

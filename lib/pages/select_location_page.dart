@@ -2,6 +2,7 @@ import 'package:crapay_app/common/basic_button.dart';
 import 'package:crapay_app/common/basic_textfield.dart';
 import 'package:crapay_app/config/assets/app_vectors.dart';
 import 'package:crapay_app/config/theme/app_colors.dart';
+import 'package:crapay_app/pages/home/main_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -61,7 +62,13 @@ class _SelectLocationPageState extends State<SelectLocationPage> {
               const SizedBox(
                 height: 50,
               ),
-              BasicButton(onPressed: () {}, text: "Continue"),
+              BasicButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const MainNavigation(),
+                    ));
+                  },
+                  text: "Continue"),
             ],
           ),
         ),

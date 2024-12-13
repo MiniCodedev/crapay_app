@@ -2,7 +2,7 @@ import 'package:crapay_app/common/basic_button.dart';
 import 'package:crapay_app/common/basic_textfield.dart';
 import 'package:crapay_app/config/theme/app_colors.dart';
 import 'package:crapay_app/pages/select_location_page.dart';
-import 'package:crapay_app/pages/sign_up_page.dart';
+import 'package:crapay_app/pages/auth/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatefulWidget {
@@ -19,7 +19,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(15.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -49,38 +49,44 @@ class _SignInPageState extends State<SignInPage> {
               const SizedBox(
                 height: 100,
               ),
-              BasicTextfield(
-                hintText: "Email",
-                prefixIcon: Icon(
-                  Icons.email_outlined,
-                  color: AppColors.primaryColor,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: BasicTextfield(
+                  hintText: "Email",
+                  prefixIcon: Icon(
+                    Icons.email_outlined,
+                    color: AppColors.primaryColor,
+                  ),
                 ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              BasicTextfield(
-                hintText: "Password",
-                prefixIcon: Icon(
-                  Icons.password_rounded,
-                  color: AppColors.primaryColor,
-                ),
-                obscureText: visibility,
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      visibility = !visibility;
-                    });
-                  },
-                  icon: visibility
-                      ? Icon(
-                          Icons.visibility_off,
-                          color: AppColors.primaryColor,
-                        )
-                      : Icon(
-                          Icons.visibility,
-                          color: AppColors.primaryColor,
-                        ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: BasicTextfield(
+                  hintText: "Password",
+                  prefixIcon: Icon(
+                    Icons.password_rounded,
+                    color: AppColors.primaryColor,
+                  ),
+                  obscureText: visibility,
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        visibility = !visibility;
+                      });
+                    },
+                    icon: visibility
+                        ? Icon(
+                            Icons.visibility_off,
+                            color: AppColors.primaryColor,
+                          )
+                        : Icon(
+                            Icons.visibility,
+                            color: AppColors.primaryColor,
+                          ),
+                  ),
                 ),
               ),
               const SizedBox(
