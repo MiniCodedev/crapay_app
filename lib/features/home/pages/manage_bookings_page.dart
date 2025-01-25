@@ -1,4 +1,8 @@
 import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/features/home/pages/order_tracking_page.dart';
+import 'package:crapay_app/features/home/widgets/booking_activity.dart';
+import 'package:crapay_app/features/home/widgets/cancelled_activity.dart';
+import 'package:crapay_app/features/home/widgets/finished_activity.dart';
 import 'package:flutter/material.dart';
 
 class ManageBookingsPage extends StatefulWidget {
@@ -55,8 +59,15 @@ class _ManageBookingsPageState extends State<ManageBookingsPage> {
                     child: ListView.builder(
                       itemCount: 3,
                       itemBuilder: (context, index) {
-                        return bookingActivity(
-                            "SP0984982", "7 April, 2024", "9:00AM");
+                        return BookingActivity(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const OrderTrackingPage(),
+                              ));
+                            },
+                            id: "SP0984982",
+                            date: "7 April, 2024",
+                            time: "9:00AM");
                       },
                     ),
                   )
@@ -66,8 +77,16 @@ class _ManageBookingsPageState extends State<ManageBookingsPage> {
                     child: ListView.builder(
                       itemCount: 3,
                       itemBuilder: (context, index) {
-                        return finishedActivity(
-                            "SP0984982", "7 April, 2024", 100, 20);
+                        return FinishedActivity(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const OrderTrackingPage(),
+                              ));
+                            },
+                            id: "SP0984982",
+                            date: "7 April, 2024",
+                            kg: 100,
+                            money: 20);
                       },
                     ),
                   )
@@ -77,134 +96,18 @@ class _ManageBookingsPageState extends State<ManageBookingsPage> {
                     child: ListView.builder(
                       itemCount: 3,
                       itemBuilder: (context, index) {
-                        return cancelledActivity("SP0984982", "7 April, 2024");
+                        return CancelledActivity(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const OrderTrackingPage(),
+                              ));
+                            },
+                            id: "SP0984982",
+                            date: "7 April, 2024");
                       },
                     ),
                   )
                 : Container()
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget cancelledActivity(
-    String id,
-    String date,
-  ) {
-    return Card(
-      elevation: 6,
-      color: AppColors.backgroundColor,
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("ID $id",
-                style: const TextStyle(
-                    fontWeight: FontWeight.w600, color: Colors.black)),
-            const SizedBox(
-              height: 5,
-            ),
-            Text(
-              date,
-              style: const TextStyle(
-                fontWeight: FontWeight.w600,
-                color: Colors.black,
-                fontSize: 13,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget finishedActivity(String id, String date, double money, double kg) {
-    return Card(
-      elevation: 6,
-      color: AppColors.backgroundColor,
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("ID $id",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600, color: Colors.black)),
-                const SizedBox(
-                  height: 5,
-                ),
-                Text("$date   ${kg}Kg",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                        fontSize: 13)),
-              ],
-            ),
-            const Spacer(),
-            Text("₹ $money",
-                style: TextStyle(
-                    fontWeight: FontWeight.w600, color: AppColors.primaryColor))
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget bookingActivity(
-    String id,
-    String date,
-    String time,
-  ) {
-    return Card(
-      elevation: 6,
-      color: AppColors.backgroundColor,
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Text("ID $id",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600, color: Colors.black)),
-                const Spacer(),
-                const Text("0-5kg",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600, color: Colors.black)),
-              ],
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Row(
-              children: [
-                Text(date,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                        fontSize: 13)),
-                const Spacer(),
-                Text(date,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                        fontSize: 13)),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(time,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                        fontSize: 13))
-              ],
-            )
           ],
         ),
       ),
