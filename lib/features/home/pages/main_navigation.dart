@@ -1,7 +1,7 @@
-import 'package:crapay_app/config/theme/app_colors.dart';
-import 'package:crapay_app/pages/home/home_page.dart';
-import 'package:crapay_app/pages/home/manage_bookings_page.dart';
-import 'package:crapay_app/pages/home/notification_page.dart';
+import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/features/home/pages/home_page.dart';
+import 'package:crapay_app/features/home/pages/manage_bookings_page.dart';
+import 'package:crapay_app/features/home/pages/notification_page.dart';
 import 'package:flutter/material.dart';
 
 class MainNavigation extends StatefulWidget {

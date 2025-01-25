@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:crapay_app/config/assets/app_vectors.dart';
-import 'package:crapay_app/config/theme/app_colors.dart';
+import 'package:crapay_app/core/assets/app_vectors.dart';
+import 'package:crapay_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

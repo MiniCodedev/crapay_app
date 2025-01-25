@@ -1,7 +1,7 @@
-import 'package:crapay_app/common/basic_button.dart';
-import 'package:crapay_app/config/assets/app_vectors.dart';
-import 'package:crapay_app/config/theme/app_colors.dart';
-import 'package:crapay_app/pages/mobile_register_page.dart';
+import 'package:crapay_app/core/common/basic_button.dart';
+import 'package:crapay_app/core/assets/app_vectors.dart';
+import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/features/init/pages/mobile_register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

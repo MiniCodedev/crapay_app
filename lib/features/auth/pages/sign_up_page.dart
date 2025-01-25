@@ -1,7 +1,7 @@
-import 'package:crapay_app/common/basic_button.dart';
-import 'package:crapay_app/common/basic_textfield.dart';
-import 'package:crapay_app/config/theme/app_colors.dart';
-import 'package:crapay_app/pages/auth/sign_in_page.dart';
+import 'package:crapay_app/core/common/basic_button.dart';
+import 'package:crapay_app/core/common/basic_textfield.dart';
+import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/features/auth/pages/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
