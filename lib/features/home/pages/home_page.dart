@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:crapay_app/core/assets/app_vectors.dart';
 import 'package:crapay_app/core/theme/app_colors.dart';
+import 'package:crapay_app/features/profile/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -69,7 +70,11 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ProfilePage(),
+                  ));
+                },
                 icon: const Icon(
                   Icons.person_outline_rounded,
                   color: Colors.black,

@@ -1,4 +1,6 @@
+import 'package:crapay_app/features/home/pages/home_page.dart';
 import 'package:crapay_app/features/home/pages/order_tracking_page.dart';
+import 'package:crapay_app/features/init/pages/initialize_page.dart';
 import 'package:crapay_app/features/init/pages/language_selection_page.dart';
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const OrderTrackingPage(),
+      home: const LanguageSelectionPage(),
       theme: AppTheme.lightTheme,
     );
   }
