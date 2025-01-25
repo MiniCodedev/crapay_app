@@ -3,7 +3,6 @@ import 'package:crapay_app/features/home/widgets/delivery_man_profile.dart';
 import 'package:crapay_app/features/home/widgets/icon_text_button.dart';
 import 'package:crapay_app/features/home/widgets/my_timeline_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:timeline_tile/timeline_tile.dart';
 
 class OrderTrackingPage extends StatelessWidget {
   const OrderTrackingPage({super.key});
